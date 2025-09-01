@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>我的作品集 | Zoeller品牌風格</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-green: #40c400;
+      --deep-green: #125E3B;
+      --black: #232323;
+      --gray: #f5f5f5;
+      --font-title: 'Montserrat', sans-serif;
+      --font-body: 'Roboto', sans-serif;
+    }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      background: var(--gray);
+      color: var(--black);
+    }
+    header {
+      background: var(--deep-green);
+      color: #fff;
+      padding: 24px 0 12px 0;
+      text-align: center;
+    }
+    header h1 {
+      font-family: var(--font-title);
+      font-size: 2.8rem;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+    header p {
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      margin-bottom: 0;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: var(--main-green);
+      padding: 10px 0;
+    }
+    nav a {
+      color: var(--black);
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 18px;
+      font-size: 1.05rem;
+      letter-spacing: 1px;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+      transition: border 0.2s;
+    }
+    nav a:hover {
+      border-bottom: 2px solid var(--deep-green);
+    }
+    .section {
+      max-width: 900px;
+      margin: 32px auto 0 auto;
+      background: #fff;
+      box-shadow: 0 0 16px rgba(0,0,0,0.04);
+      border-radius: 12px;
+      padding: 32px 30px;
+    }
+    .section-title {
+      font-family: var(--font-title);
+      color: var(--main-green);
+      font-size: 2rem;
+      margin-bottom: 20px;
+      border-left: 6px solid var(--main-green);
+      padding-left: 12px;
+      letter-spacing: 1px;
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap: 28px;
+      margin-bottom: 24px;
+    }
+    .work-card {
+      background: var(--gray);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(64,196,0,0.05);
+      padding: 18px 14px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .work-card:hover {
+      transform: translateY(-5px) scale(1.2);
+      border: 2px solid var(--main-green);
+      box-shadow: 0 4px 14px rgba(64,196,0,0.16);
+    }
+    .work-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+    .work-title {
+      font-family: var(--font-title);
+      font-size: 1.15rem;
+      color: var(--deep-green);
+      margin-bottom: 8px;
+    }
+    footer {
+      text-align: center;
+      background: var(--black);
+      color: #fff;
+      padding: 22px 0 12px 0;
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+    .contact-btn {
+      background: var(--main-green);
+      color: var(--black);
+      padding: 10px 34px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-family: var(--font-title);
+      letter-spacing: 1px;
+      margin-top: 24px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .contact-btn:hover {
+      background: var(--deep-green);
+      color: #fff;
+    }
+    @media (max-width: 600px) {
+      .section { padding: 18px 8px; }
+      .portfolio-grid { gap: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TFL 的作品集</h1>
+    <p>Zoeller Pump Company 品牌風格平面設計</p>
+  </header>
+  <nav>
+    <a href="#portfolio">名片</a>
+    <a href="#about">產品DM</a>
+    <a href="#contact">關於我</a>
+  </nav>
+  <div class="section" id="portfolio">
+    <div class="section-title">名片</div>
+    <div class="portfolio-grid">
+      <div class="work-card">
+        <img src="img/Front.png" alt="作品1">
+        <div class="work-title">內業</div>
+        <div>結合品牌色與簡潔結構，易於閱讀。</div>
+      </div>
+      <div class="work-card">
+        <img src="img/Front (2).png" alt="作品2">
+        <div class="work-title">工程</div>
+        <div>運用深綠與淺綠，凸顯工業質感。</div>
+      </div>
+      <div class="work-card">
+        <img src="img/Front 3.png" alt="作品3">
+        <div class="work-title">外業</div>
+        <div>以Zoeller主色打造可靠感。</div>
+      </div>
+    </div>
+  </div>
+  <div class="section" id="about">
+    <div class="section-title">產品DM</div>
+    <div class="work-card">
+      <img src="img/1.png" alt="作品1">
+      <div class="work-title">DM1</div>
+      <div>強調品牌形象，凸顯經營核心價值。</div>
+    </div>
+    <div class="work-card">
+      <img src="img/2.png" alt="作品2">
+      <div class="work-title">DM2</div>
+      <div>展現專業形象，說明經營服務品項。</div>
+    </div> 
+  </div>
+  <div class="section" id="contact" style="text-align: center;">
+    <div class="section-title">關於我</div>
+    <p style="margin: 60px;">
+      我是具備美工及網頁設計經驗的平面設計師，擅長品牌識別與設計，熱愛以高辨識度的色彩與排版，<br>呈現工業及專業氛圍。
+    </p>
+    <a href="https://tfl-portfolio.blogspot.com/" class="contact-btn">更多作品集</a>
+  </div>
+  <footer>
+    &copy; 2025 TFL Design. Inspired by Zoeller Pump Company.
+  </footer>
+</body>
+</html>
