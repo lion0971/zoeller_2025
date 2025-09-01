@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-Hant, Arial">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -130,6 +130,28 @@
       background: var(--deep-green);
       color: #fff;
     }
+
+/* 回到頂端按鈕樣式 */
+    #backToTop {
+      display: none; /* 預設隱藏 */
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      background-color: #40c400; /* 可用品牌主綠色 */
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      transition: opacity 0.3s ease;
+    }
+    #backToTop:hover {
+      background-color: #125e3b; /* 深綠色悬停效果 */
+    }
+
     @media (max-width: 600px) {
       .section { padding: 18px 8px; }
       .portfolio-grid { gap: 15px; }
@@ -186,6 +208,26 @@
     </p>
     <a href="https://tfl-portfolio.blogspot.com/" class="contact-btn">更多作品集</a>
   </div>
+  <!-- 回到頂端按鈕 -->
+  <button id="backToTop" title="回到最頂端">Top</button>
+
+  <script>
+    const backToTopBtn = document.getElementById("backToTop");
+
+    // 滾動事件，超過100px顯示按鈕，否則隱藏
+    window.onscroll = function() {
+      if (document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    };
+
+    // 點擊按鈕滾動回頂端
+    backToTopBtn.onclick = function() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+  </script>
   <footer>
     &copy; 2025 TFL Design. Inspired by Zoeller Pump Company.
   </footer>
